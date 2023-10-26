@@ -1,0 +1,1 @@
+strategy;nbr_agent;nbr_target;obs_range;com_range;sim_duration;o_av_m;map_size;max_idleness;max_idleness_blur;A_metric;agent_speed;target_speed;target_behavior;H_metric

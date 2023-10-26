@@ -1,0 +1,8 @@
+/**:
+  ros__parameters:
+    map_size : 20.0
+    sim_speed : 2.0
+    use_sim_time : true
+    obs_range : 5
+    com_range : 20
+    map_discrete : 1

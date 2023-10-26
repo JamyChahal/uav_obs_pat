@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="patroller">
+<xacro:property name="ws" value="$(arg ws)"/>
+<xacro:property name="obs_radius" value="$(arg obs_radius)"/>
+  <link name="${ws}/base_link">
+    <visual name="body">
+      <geometry>
+	<cylinder length="0.2" radius="0.2"/>
+      </geometry>
+      <material name="blue">
+	<color rgba="0 0 200 1"/>
+	</material>
+    </visual>
+    <visual name="nose">
+	<origin xyz="0.2 0 0" rpy="0 0 0"/>
+	<geometry>
+		<box size="0.1 0.1 0.2"/>
+	</geometry>
+	<material name="cyan">
+		<color rgba="0 1 1 1"/>
+	</material>
+    </visual>
+  </link>
+  <link name="${ws}/obs_radius">
+    <visual name="observation">
+	<geometry>
+	 <cylinder length="2" radius="${obs_radius}"/>
+	</geometry>
+	<material name="obs_color">
+	  <color rgba="0.5 0.5 0.5 0.1"/>
+	</material>
+    </visual>
+  </link>
+
+  <joint name="${ws}_obs_joint" type="fixed">
+	<parent link="${ws}/base_link"/>
+	<child link="${ws}/obs_radius"/>
+	<origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+</robot>

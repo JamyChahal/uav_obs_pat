@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="patroller">
+<xacro:arg name="ws" default="robot"/>
+<xacro:property name="ws" value="$(arg ws)"/>
+  <link name="${ws}/base_link">
+    <visual name="body">
+      <geometry>
+	<cylinder length="0.2" radius="0.2"/>
+      </geometry>
+      <material name="red">
+	<color rgba="200 0 0 1"/>
+	</material>
+    </visual>
+    <visual name="nose">
+	<origin xyz="0.2 0 0" rpy="0 0 0"/>
+	<geometry>
+		<box size="0.1 0.1 0.2"/>
+	</geometry>
+	<material name="little_red">
+		<color rgba="1 1 0 1"/>
+	</material>
+    </visual>
+  </link>
+</robot>
