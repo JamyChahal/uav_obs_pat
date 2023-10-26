@@ -6,7 +6,7 @@ This project is led by Jamy Chahal, for the thesis : "Multi-drones patrolling an
 * A Rviz simulation, to evaluate faster the strategy's efficiency 
 * A code to experiment the strategy with true UAVs, here we use [Tello EDU](https://www.ryzerobotics.com/fr/tello-edu). 
 
-![](https://github.com/JamyChahal/uav_obs_pat/main/Gazebo.jpg)
+![](https://github.com/JamyChahal/uav_obs_pat/blob/main/Gazebo.jpg)
 
 ## PhD citation
 
