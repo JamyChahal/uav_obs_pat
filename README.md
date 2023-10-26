@@ -1,6 +1,6 @@
 # Observation and patrolling problem framework for UAV's
 
-This project is performed by Jamy Chahal, under the thesis : "Multi-drones patrolling and observation of mobile targets". The objective is to perform both the patrolling of the environment and the target's observation. The project is structured as follows:
+This project is led by Jamy Chahal, for the thesis : "Multi-drones patrolling and observation of mobile targets". The objective is to perform both the patrolling of the environment and the target's observation. The project is structured as follows:
 
 * A Gazebo simulation, to evaluate the strategy of the UAVs with ground robot as targets
 * A Rviz simulation, to evaluate faster the strategy's efficiency 
