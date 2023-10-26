@@ -1,8 +1,14 @@
 # Observation and patrolling problem framework for UAV's
 
+This project is performed by Jamy Chahal, under the thesis : "Multi-drones patrolling and observation of mobile targets". The objective is to perform both the patrolling of the environment and the target's observation. The project is structured as follows:
+
+* A Gazebo simulation, to evaluate the strategy of the UAVs with ground robot as targets
+* A Rviz simulation, to evaluate faster the strategy's efficiency 
+* A code to experiment the strategy with true UAVs, here we use [Tello EDU](https://www.ryzerobotics.com/fr/tello-edu). 
+
 ![](https://github.com/JamyChahal/uav_obs_pat/Gazebo.jpg)
 
-## Paper citation
+## PhD citation
 
 The code is open source. Please, if the code has been useful for your research paper, or in your project, please cite the following paper:
 
@@ -131,11 +137,12 @@ At the end of the execution, all the result will be stored in a result.txt file,
 
 Here is the structure of the repository: 
 
-* **evaluator**: Node used to get the evaluation metric of a mission, and kill it when reaching the "mission_duration" value
-* **ground_robot_description**: Ground target description for Gazebo representation
-* **target_strategy**: Node used for the random target strategy 
-* **tello_description**: UAV, called Tello, description for Gazebo representation
-* **tello_driver**: Drivers for true Tello UAV's experimentation
+* **evaluator**: Node used to get the evaluation metric of a mission, and kill it when reaching the "mission_duration" value.
+* **ground_robot_description**: Ground target description for Gazebo representation.
+* **remapping_exp**: Node used to listen from Vicon positioning system bridge, and modify the topic name. The bridge is performed by [ros2-vicon-receiver node](https://github.com/OPT4SMART/ros2-vicon-receiver).
+* **target_strategy**: Node used for the target's strategy.
+* **tello_description**: UAV, called Tello, description for Gazebo representation.
+* **tello_driver**: Drivers for true Tello UAV's experimentation.
 * **tello_gazebo**: Tello Plugin for Gazebo, including launch and world
 * **tello_msgs**: ROS2 message used by the Tello Plugin
 * **tello_strategy**: Node used for the agent strategy, such as the A-CMOMMT, I-CMOMMT...
